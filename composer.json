@@ -1,0 +1,17 @@
+{
+    "name": "atlas89/telegram-notify-order",
+    "description": "Notify about new message from website",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "respect/validation": "^2.0",
+        "pimple/pimple": "^3.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "atlas89",
+            "email": "web.dev89@yandex.by"
+        }
+    ]
+}

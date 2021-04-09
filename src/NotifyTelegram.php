@@ -71,13 +71,7 @@ class NotifyTelegram implements Interfaces\NotifyTelegramInterface{
             $result = $client->request('GET');
        return json_decode($result->getBody());
     }
-    
-    //Асинхронные запросы
-    protected function queryAsync ($method, $params=[]) {
-        $client = new Client();
-        $promise = $client->requestAsync($method, $this->getApiUri($method, $params));
-    }
-
+   
     //Функция отправки уведомления
     public function sendMessages($text = "") {
             $response = $this->query("sendMessage", [
@@ -85,14 +79,6 @@ class NotifyTelegram implements Interfaces\NotifyTelegramInterface{
                 'chat_id' => $this->getChatID(),
             ]);
         return $response;
-    }
-    
-    //Асинхронный запрос без возврата результата
-    public function sendMessageAsync($text="") {
-        $response = $this->queryAsync("sendMessage", [
-                'text'=>$text,
-                'chat_id' => $this->getChatID(),
-            ]);
     }
     
     //Функция получения информации о боте

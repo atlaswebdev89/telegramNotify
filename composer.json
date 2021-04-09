@@ -10,8 +10,14 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "atlas89",
-            "email": "web.dev89@yandex.by"
+            "name": "AtlasComp",
+            "email": "web.dev89@yandex.by",
+            "homepage": "https://github.com/doroshuk89"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "atlasTelegramNotify\\": "src/"
+        }
+    }
 }

@@ -85,11 +85,4 @@ class NotifyTelegram implements Interfaces\NotifyTelegramInterface{
     public function getMe () {
         return $this->query("getMe");
     }
-    
-    //тестовой метод
-    public function test($param) {
-        return $param;
-    }
-    
-    
 }
